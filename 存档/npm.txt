@@ -1,0 +1,156 @@
+﻿yum install epel-release
+
+centos7
+rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+rpm -ivh http://www.percona.com/downloads/percona-release/redhat/0.1-4/percona-release-0.1-4.noarch.rpm
+rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+========
+centos6
+rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
+rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-6.rpm
+========
+
+ulimit -SHn 65535
+
+setenforce 0 >  /dev/null  2>>/root/error.log
+sed -i 's/SELINUX=enforcing/#SELINUX=enforcing/' /etc/selinux/config
+echo 'SELINUX=disabled' >> /etc/selinux/config
+
+echo /lib >> /etc/ld.so.conf
+echo /usr/lib >> /etc/ld.so.conf
+echo /usr/lib64 >> /etc/ld.so.conf
+echo /usr/local/lib >> /etc/ld.so.conf
+ldconfig
+
+yum install ntpdate
+service ntpd stop
+ntpdate ntp1.aliyun.com
+hwclock -w
+yum install nginx
+yum install php71-php-devel php71-php-cli php71-php-fpm php71-php-pdo php71-php-mysqlnd php71-php-mbstring php71-php-gd php71-php-mcrypt php71-php-opcache php71-php-pear php71-php-xml php71-php-xmlrpc php71-php-pecl-imagick php71-php-pecl-imagick-devel php71-php-pecl-zip php71-php-phalcon3 php71-php-pecl-redis
+
+yum install Percona-Server-client-57 Percona-Server-devel-57 Percona-Server-server-57 Percona-Server-shared-57 percona-xtrabackup-24
+
+yum install redis
+ln -s /opt/remi/php71/root/usr/bin/php /usr/bin/php
+
+/usr/sbin/groupadd www
+/usr/sbin/useradd -g www www
+sed -i 's#;pid = run/php-fpm.pid#pid = run/php-fpm.pid#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#user = nobody#user = www#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#group = nobody#group = www#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;pm.min_spare_servers = 5#pm.min_spare_servers = 5#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;pm.max_spare_servers = 35#pm.max_spare_servers = 35#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;pm.start_servers = 20#pm.start_servers = 20#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;listen.mode = 0660#listen.mode = 0660#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;listen.owner = nobody#listen.owner = www#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#user = apache#user = www#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#group = apache#group = www#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;request_terminate_timeout = 0#request_terminate_timeout = 1m#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;request_slowlog_timeout = 0#request_slowlog_timeout = 5s#' /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#pm = dynamic#pm = static#' /etc/opt/remi/php71/php-fpm.d/www.conf
+max_children=`free -m | awk 'NR==2{printf "%i", $2/80 - 20}'`
+sed -i "s#pm.max_children = 50#pm.max_children = ${max_children}#" /etc/opt/remi/php71/php-fpm.d/www.conf
+sed -i 's#;pm.max_requests = 500#pm.max_requests = 5000#' /etc/opt/remi/php71/php.ini
+sed -i 's#short_open_tag = Off#short_open_tag = On#' /etc/opt/remi/php71/php.ini
+sed -i 's#;cgi.fix_pathinfo=1#cgi.fix_pathinfo=0#g' /etc/opt/remi/php71/php.ini
+sed -i 's#;cgi.fix_pathinfo=0#cgi.fix_pathinfo=0#g' /etc/opt/remi/php71/php.ini
+sed -i 's#upload_max_filesize = 2M#upload_max_filesize = 64M#g' /etc/opt/remi/php71/php.ini
+sed -i 's#post_max_size = 8M#post_max_size = 64M#g' /etc/opt/remi/php71/php.ini
+sed -i 's#;sendmail_path =#sendmail_path = sendmail -t -i#g' /etc/opt/remi/php71/php.ini
+sed -i 's#disable_functions =#disable_functions = exec,passthru,shell_exec,system,proc_open,popen,parse_ini_file,show_source#g' /etc/opt/remi/php71/php.ini
+chkconfig --level 345 php71-php-fpm on
+chkconfig --level 345 nginx on
+chkconfig --level 345 mysqld on
+service mysqld start
+
+mysqladmin -h 127.0.0.1 -u root password ����MYSQL����
+mysql -u root -p����MYSQL���� -h 127.0.0.1 <<QUERY_INPUT
+use mysql;
+delete from user where not (user='root') ;
+flush privileges;
+QUERY_INPUT
+service mysqld stop
+
+mkdir /etc/nginx/vhost/
+rm -rf /etc/nginx/conf.d/
+ln -s /etc/nginx/vhost/ /root/vhost
+
+/etc/nginx/nginx.conf
+
+user  www www;
+worker_processes auto;
+error_log  /var/log/nginx/nginx_error.log  crit;
+pid        /var/run/nginx.pid;
+
+worker_rlimit_nofile 51200;
+
+events{
+        use epoll;
+        worker_connections 51200;
+}
+
+http{
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    server_names_hash_bucket_size 128;
+    client_header_buffer_size 32k;
+    large_client_header_buffers 4 32k;
+    client_max_body_size 20m;
+    add_header X-Frame-Options SAMEORIGIN;
+
+    sendfile on;
+    server_tokens off;
+    tcp_nopush     on;
+    keepalive_timeout 60;
+    tcp_nodelay on;
+
+    fastcgi_connect_timeout 300;
+    fastcgi_send_timeout 300;
+    fastcgi_read_timeout 300;
+    fastcgi_buffer_size 64k;
+    fastcgi_buffers 4 64k;
+    fastcgi_busy_buffers_size 128k;
+    fastcgi_temp_file_write_size 128k;
+    fastcgi_intercept_errors on;
+    fastcgi_hide_header X-Powered-By;
+
+    gzip on;
+    gzip_min_length  1k;
+    gzip_buffers     4 16k;
+    gzip_http_version 1.0;
+    gzip_comp_level 2;
+    gzip_types       text/plain application/x-javascript text/css application/xml;
+    gzip_vary on;
+
+    #limit_zone  crawler  $binary_remote_addr  10m;
+    server{
+        listen       80 default;
+        server_name _ "";
+        index error.html;
+        root  /home/www/error;
+
+        location /nginx_status {
+            stub_status  on;
+            access_log   off;
+            allow 127.0.0.1;
+            deny all;
+        }
+        location / {
+            allow 127.0.0.1;
+            deny all;
+        }
+    }
+    include vhost/*.conf;
+}
+
+
+/etc/nginx/fastcgi_params
+
+fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+composer config -g repositories.packagist composer https://packagist.phpcomposer.com
