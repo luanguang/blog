@@ -1,4 +1,4 @@
-## redpacket项目总结(未完成)
+## redpacket项目总结
 > redpacket项目是通过商户发红包吸引用户关注自己商品，从而提高自己商品的知名度。有管理、代理、商户、用户四种状态。管理员添加代理。代理管理商户，商户可发红包。
 
 ### 管理端：
@@ -39,6 +39,7 @@ DB::transaction(function () {
 ```Ruby
 DB::transaction(function () {
     DB::table('users')->where('votes', '>', 100)->lockForUpdate()->get();
+    #code
 });
 ```
 
@@ -51,5 +52,55 @@ class Reseller extends Model {
     }
 }
 ```
+
+#### 多对多多态关联关系
+代理商可以有多个地区，商户也可以有多个地区。有一个地区记录表，代理商和商户使用的地区会重叠。
+```ruby
+district_role
+role_type
+role_id
+district_id
+
+class Reseller extends Model {
+    public function districts()
+    {
+        return $this->morphToMany(District::class, 'role', 'district_role')
+    }
+}
+
+class Merchant extends Model {
+    public function districts()
+    {
+        return $this->morphToMany(District::class, 'role', 'district_role')
+    }
+}
+
+class District extends Model {
+    public function resellers()
+    {
+        return $this->morphedByMany(Reseller::class, 'role', 'district_role');
+    }
+
+    public function merchants()
+    {
+        return $this->morphedByMany(Merchant::class, 'role', 'district_role');
+    }
+}
+#中间表继承Pivot
+class DistrictRole extends Pivot {}
+```
+
+#### 新增或者更新
+新增一个代理商或者商户的时候，我们会传入一些地区id，可以使用简单的方法同步到中间表
+```ruby
+$reseller->districts()->attach($districts);
+```
+更新的时候传入一些地区id，我们也可以简单的同步到中间表
+```ruby
+$merchant->districts()->sync($districts);
+```
+
+> first
+
 
 

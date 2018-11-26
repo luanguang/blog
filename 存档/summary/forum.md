@@ -38,3 +38,5 @@ class Activity extends Model
         return $this->morphMany(Activity::class, 'subject');
     }
 ```
+
+> twice
