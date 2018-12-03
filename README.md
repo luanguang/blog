@@ -23,6 +23,14 @@
 未完待续……
 
 ---
+
+## 简单算法
+
+[二分查找](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
+
+[排序](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F)
+
+---
 ## 电子书
 
 [book](https://github.com/luanguang/articles/tree/master/book)
