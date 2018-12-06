@@ -51,7 +51,10 @@ array_walk($array, function ($value) {
 ```
 该语法在laravel底层当中随处可见
 
-### 3. 魔术方法
+### 3. Trait
+trait 不能被实例化，引入trait的类，假如方法相同会覆盖父类方法。
+
+简化三元运算 ?: 和 ?? 同样
 
 
 
