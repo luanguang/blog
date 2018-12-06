@@ -32,6 +32,12 @@
 
 [递归](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E9%80%92%E5%BD%92)
 
+[D&C快速排序](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/D%26C%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F)
+
+[散列表](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E6%95%A3%E5%88%97%E8%A1%A8)
+
+[广度优先查找](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88)
+
 ---
 ## 电子书
 
