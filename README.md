@@ -24,7 +24,7 @@
 
 ---
 
-## 简单算法
+## [简单算法](https://github.com/luanguang/articles/blob/master/book/%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3.pdf)
 
 [二分查找](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
 
@@ -37,6 +37,8 @@
 [散列表](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E6%95%A3%E5%88%97%E8%A1%A8)
 
 [广度优先查找](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88)
+
+[狄克斯特拉算法](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95)
 
 ---
 ## 电子书
