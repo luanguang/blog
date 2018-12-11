@@ -40,6 +40,14 @@
 
 [狄克斯特拉算法](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95)
 
+[贪婪算法](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95)
+
+---
+
+## 深入理解计算机系统
+
+[zero](https://github.com/luanguang/articles/blob/master/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/zero.md)
+
 ---
 ## 电子书
 
