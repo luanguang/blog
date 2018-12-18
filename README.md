@@ -42,6 +42,23 @@
 
 [贪婪算法](https://github.com/luanguang/articles/tree/master/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95)
 
+---
+
+## 图解HTTP
+
+[HTTP出现](https://github.com/luanguang/articles/blob/master/%E5%9B%BE%E8%A7%A3HTTP/%E5%A3%B9.md)
+
+---
+
+## 深入理解计算机系统
+
+[占坑](https://github.com/luanguang/articles/blob/master/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E9%9B%B6.md)
+
+---
+
+## Linux命令行与shell脚本编程大全
+
+[linux的开始与文件的操作](https://github.com/luanguang/articles/blob/master/LinuxShell/1-3.md)
 
 ---
 ## 电子书
@@ -50,5 +67,5 @@
 
 ## codewars
 
-![](https://github.com/luanguang/articles/blob/master/images/codewars.png)
+![2018-11](https://github.com/luanguang/articles/blob/master/images/codewars/2018-11-codewars.png)
 
