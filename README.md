@@ -60,6 +60,8 @@
 
 [linux的开始与文件的操作](https://github.com/luanguang/articles/blob/master/LinuxShell/1-3.md)
 
+[继续linux命令](https://github.com/luanguang/articles/blob/master/LinuxShell/4.md)
+
 ---
 ## 电子书
 
