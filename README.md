@@ -62,6 +62,8 @@
 
 [继续linux命令](https://github.com/luanguang/articles/blob/master/LinuxShell/4.md)
 
+[理解一下shell](https://github.com/luanguang/articles/blob/master/LinuxShell/5.md)
+
 ---
 ## 电子书
 
