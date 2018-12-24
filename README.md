@@ -64,6 +64,8 @@
 
 [理解一下shell](https://github.com/luanguang/articles/blob/master/LinuxShell/5.md)
 
+[使用定义linux变量](https://github.com/luanguang/articles/blob/master/LinuxShell/6.md)
+
 ---
 ## 电子书
 
