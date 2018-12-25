@@ -66,6 +66,8 @@
 
 [使用定义linux变量](https://github.com/luanguang/articles/blob/master/LinuxShell/6.md)
 
+[权限管理及安装软件](https://github.com/luanguang/articles/blob/master/LinuxShell/7-9.md)
+
 ---
 ## 电子书
 
