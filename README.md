@@ -57,7 +57,7 @@
 ---
 
 ## Linux命令行与shell脚本编程大全
-
+### linux基本操作
 [linux的开始与文件的操作](https://github.com/luanguang/articles/blob/master/LinuxShell/1-3.md)
 
 [继续linux命令](https://github.com/luanguang/articles/blob/master/LinuxShell/4.md)
@@ -67,6 +67,10 @@
 [使用定义linux变量](https://github.com/luanguang/articles/blob/master/LinuxShell/6.md)
 
 [权限管理及安装软件](https://github.com/luanguang/articles/blob/master/LinuxShell/7-9.md)
+
+[vim编辑器的使用](https://github.com/luanguang/articles/blob/master/LinuxShell/10.md)
+
+### 开始编写脚本
 
 ---
 ## 电子书
