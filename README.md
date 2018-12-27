@@ -72,6 +72,8 @@
 
 ### 开始编写脚本
 
+[shell脚本基础](https://github.com/luanguang/articles/blob/master/LinuxShell/11.md)
+
 ---
 ## 电子书
 
