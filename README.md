@@ -74,6 +74,8 @@
 
 [shell脚本基础](https://github.com/luanguang/articles/blob/master/LinuxShell/11.md)
 
+[shell脚本的if-else](https://github.com/luanguang/articles/blob/master/LinuxShell/12.md)
+
 ---
 ## 电子书
 
