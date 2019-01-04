@@ -82,6 +82,10 @@
 
 [shell脚本的if-else](https://github.com/luanguang/articles/blob/master/LinuxShell/12.md)
 
+[shell脚本的循环](https://github.com/luanguang/articles/blob/master/LinuxShell/13.md)
+
+[shell处理用户输入](https://github.com/luanguang/articles/blob/master/LinuxShell/14.md)
+
 ---
 ## 电子书
 
