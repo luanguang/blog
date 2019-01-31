@@ -56,9 +56,19 @@
 
 ---
 
-## [python网络数据采集]
+## [python网络数据采集](https://github.com/luanguang/blog/blob/master/book/Python%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%20-%202016.pdf)
 
+[用beautifulSoup分辨](https://github.com/this-is-spider/python-bs4)
 
+[采集一下wiki](https://github.com/this-is-spider/python-wiki)
+
+[给python弄个header](https://github.com/this-is-spider/python-header)
+
+[爬一个免费代理池](https://github.com/this-is-spider/freeProxy)
+
+[识别一下验证码](https://github.com/this-is-spider/python-pil)
+
+[恼人的单元测试](https://github.com/this-is-spider/python-unittest)
 
 ---
 
