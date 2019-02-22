@@ -3,3 +3,5 @@
 
 Downloader Middleware 的功能卡分强大，修改 User-Agent、 处理重定向 、设置代理、失败重试、 设置 Cookies 等功能都需要借助它来实现
 
+
+从crawler的设置中读入headers，并初始化中间件的headers值
