@@ -1,5 +1,5 @@
 ### composer.json
-```ruby
+```php
 "autoload": {
         "psr-4": {
             "App\\": "app/"
@@ -19,7 +19,7 @@
 `illuminate/database`，添加一个config文件连接数据库，添加model类。  
 `illuminate/view`完成视图功能。
 
-```ruby
+```php
 {
     "require": {
         "illuminate/routing": "^5.7",

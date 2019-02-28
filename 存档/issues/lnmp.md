@@ -29,7 +29,7 @@ wq退出 `yum install nginx`
 
 ### 重点开放防火墙80端口:
 
-```ruby
+```php
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=80/udp --permanent
 ```
@@ -67,7 +67,7 @@ firewall-cmd --zone=public --add-port=80/udp --permanent
 
 修改mysql密码:
 
-```ruby
+```php
 shell> mysql -uroot -p
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourPassword9#'; 
 ```
@@ -75,7 +75,7 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourPassword9#';
 修改mysql的默认编码为utf8
 
 `vim /etc/my.cnf`
-```ruby
+```php
 [mysqld]
 character_set_server=utf8
 init_connect='SET NAMES utf8'
@@ -229,7 +229,7 @@ chmod -R 755 www
 ```
 
 修改.env文件
-```ruby
+```php
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:zCWGDEsNSF0bmt/Gh/bdlcRHjWKCCiny6brrer5OZxA=

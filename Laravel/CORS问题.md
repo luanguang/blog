@@ -1,6 +1,6 @@
 一个项目，后台是前后端分离，前台是前后端一体，使用laravel 5.7版本。
 在后台接口编写完毕之后，跟前端进行对接，报错
-```ruby
+```php
 Access to XMLHttpRequest at 'http://circle-be.fy/admin/session' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 ```
 这是laravel的CORS问题导致的，解决办法是安装一个laravel-cors包

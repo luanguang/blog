@@ -33,7 +33,7 @@ function __set($name, $value) {
 >PHP面向对象中new self( )和 new static( ) 的区别
 >>在PHP中 self指向定义了当前被调用方法的类， static指向调用当前静态方法的类。
 
-```ruby
+```php
 <?php
 class A {
     public static function foo() {

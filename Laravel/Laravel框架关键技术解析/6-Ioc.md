@@ -1,7 +1,7 @@
 ## Ioc容器
 IOC容器是laravel的核心也是难点。以下是简单的核心实现方法，实际上laravel要比这个更加复杂。
 
-```ruby
+```php
 <?php
 interface Visit
 {
@@ -142,7 +142,7 @@ $tra->visitTibet();
 ```
 - bind()：将类进行绑定
 - singleton()：bind的特例，shared参数为true，也是进行绑定
-```ruby
+```php
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Essential\Console\Kernel::class
@@ -154,7 +154,7 @@ $app->singleton(
 ## 中间件
 
 首先介绍一下装饰模式者
-```ruby
+```php
 interface Decorator
 {
     public function display();
@@ -228,7 +228,7 @@ $fire->display();
 在laravel当中，这个装饰者模式运用于中间件。
 
 
-```ruby
+```php
 interface Middleware
 {
     public static function handle(Closure $next);
@@ -332,7 +332,7 @@ function then()
 <br>
 ```
 array_reduce当中的匿名函数套了很多层。
-```ruby
+```php
 object(Closure)#8 (1) {
   ["static"]=>
   array(2) {
@@ -385,7 +385,7 @@ object(Closure)#8 (1) {
 }
 ```
 执行顺序`Che(Enc(Add(Sta(Sha(Ver(function (firstSlice, Verify)))))))`这些是基础的，在laravel当中也能够看到
-```ruby
+```php
 namespace App\Http;
 class Kernel extends HttpKernel {
     protected $middlewareGroups = [
@@ -402,7 +402,7 @@ class Kernel extends HttpKernel {
 }
 ```
 通过这个装饰者模式学习，当我们想自定义一个中间件的时候，有两种考虑，一种考虑是在请求处理响应生成之前，一种是请求处理响应生成之后。
-```ruby
+```php
 class CheckRole
 {
     public function handle($request, Closure $next)
