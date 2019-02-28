@@ -110,5 +110,5 @@
 
 ## codewars
 
-![2018-11](https://github.com/luanguang/articles/blob/master/images/codewars/2018-11-codewars.png)
+![2019-2](https://github.com/luanguang/articles/blob/master/images/codewars/2019-2.png)
 
