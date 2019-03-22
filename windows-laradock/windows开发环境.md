@@ -1,4 +1,4 @@
-1.  官网下载php.zip 7.1版本 修改部分php.ini，下载php_redis到ext下面
+1.  官网下载php.zip 7.1版本 修改部分php.ini，下载php_redis到ext下面。可以先查看 php -i当中的Thread Safety：如果是enable，则是Thread Safe（线程安全）版本；否则，就是None Thread Safe（非线程安全）版本。
 2.  官网下载composer    修改composer源  
 `composer config -g repo.packagist composer https://packagist.phpcomposer.com`
 3.  安装git 默认一步到位。
