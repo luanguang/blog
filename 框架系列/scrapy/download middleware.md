@@ -1,4 +1,4 @@
-![流程图](https://github.com/luanguang/blog/blob/master/scrapy/scrapy%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+![流程图](./scrapy%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
 ### 下载中间件
 下载中间件是scrapy框架流程的第四第五步，分别处理request和response。要想使用好这东西，要搞懂执行顺序，返回类型之后又进行了什么处理。

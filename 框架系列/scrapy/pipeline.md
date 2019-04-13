@@ -1,4 +1,4 @@
-![流程图](https://github.com/luanguang/blog/blob/master/scrapy/scrapy%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+![流程图](./scrapy%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
 ### 最后一步item pipeline
 作为scrapy框架爬取数据的最后一步，pipeline的主要功能就是对爬取下来的结果进行处理以及保存。

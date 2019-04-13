@@ -7,7 +7,9 @@ Ubuntu 14/16 下的 Laravel LNMP 线上环境自动部署脚本
 ```yum -y install vim-enhanced```
 
 ### 安装nginx：
-到官网的download里面我们看到了 [图片]
+到官网的download里面我们看到了 
+
+![](../../images/lnmp/nginx官网.png)
 
 `vim /etc/yum.repos.d/nginx.repo`
 添加：
@@ -39,6 +41,8 @@ firewall-cmd --zone=public --add-port=80/udp --permanent
 
 然后在浏览器输入服务器的地址或者ip，显示界面，nginx安装成功
 
+![](../../images/lnmp/nginx.png)
+
 ### 安装mysql
 
 下载mysql源安装包：
@@ -53,6 +57,8 @@ firewall-cmd --zone=public --add-port=80/udp --permanent
 
 `yum repolist enabled | grep "mysql.*-community.*"`
 
+![](../../images/lnmp/mysql源.png)
+
 安装mysql：
 
 `yum install mysql-community-server`
@@ -64,6 +70,8 @@ firewall-cmd --zone=public --add-port=80/udp --permanent
 然后查看mysql的初始密码:
 
 `grep 'temporary password' /var/log/mysqld.log`
+
+![](../../images/lnmp/mysql密码.png)
 
 修改mysql密码:
 
@@ -80,6 +88,8 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourPassword9#';
 character_set_server=utf8
 init_connect='SET NAMES utf8'
 ```
+
+![](../../images/lnmp/mysql默认编码.png)
 
 ### 安装mysql：
 
@@ -195,6 +205,8 @@ chmod -R 755 www
     phpinfo()
 
 ```
+
+![](../../images/lnmp/lnmp完成.png)
 
 
 ### 安装git
