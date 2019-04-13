@@ -1,3 +1,5 @@
+![目录](/images/blog项目.png)
+
 # learning
 ## [编码](https://github.com/luanguang/articles/blob/master/book/%E7%BC%96%E7%A0%81.pdf)
 
@@ -110,5 +112,5 @@
 
 ## codewars
 
-![2019-2](https://github.com/luanguang/articles/blob/master/images/codewars/2019-2.png)
+![2019-2](/images/codewars/2019-2.png)
 
