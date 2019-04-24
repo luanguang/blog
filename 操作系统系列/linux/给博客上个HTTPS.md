@@ -32,3 +32,7 @@ server {
        }
   }
 ```
+
+
+
+[给HTTPS续期，要天数小于30天才可以。](https://www.jianshu.com/p/d318321b93a1)
