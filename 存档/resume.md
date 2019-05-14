@@ -1,7 +1,7 @@
 # 个人信息
  - 方宇/男/1994
   - 手机：18892682448
- - Email：523086505@qq.com/luanguang600@gmail.com
+ - Email：523086505@qq.com
  - 本科/衢州学院自动化
  - 工作年限：2年
  - 技术博客：https://www.guangsky.com
